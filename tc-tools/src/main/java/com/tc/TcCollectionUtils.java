@@ -18,7 +18,7 @@ public class TcCollectionUtils {
      * @param pieceSize 需要分页尺寸
      */
     public static <T> List<List<T>> separateIntoPieces(List<T> source, int pieceSize) {
-        if (CollectionUtils.isEmpty(source)) return null;
+        if (CollectionUtils.isEmpty(source)) return new ArrayList<>(0);
         List<List<T>> result = new ArrayList<>();
         int sourceSize = source.size();
         if (sourceSize <= pieceSize) {
