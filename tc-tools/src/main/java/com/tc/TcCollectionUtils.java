@@ -144,6 +144,19 @@ public class TcCollectionUtils {
         return Arrays.asList(array);
     }
 
+    public static <E> ArrayList union(Collection sourceOne, Collection<E> sourceTwo) {
+        if (CollectionUtils.isEmpty(sourceOne) && CollectionUtils.isEmpty(sourceTwo)) {
+            return new ArrayList<>(0);
+        }
+        if (CollectionUtils.isEmpty(sourceOne)) {
+            return new ArrayList<>(sourceTwo);
+        }
+        if (CollectionUtils.isEmpty(sourceTwo)) {
+            return new ArrayList<>(sourceOne);
+        }
+        return new ArrayList<>(CollectionUtils.union(sourceOne, sourceTwo));
+    }
+
 }
 
 
