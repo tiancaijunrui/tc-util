@@ -39,11 +39,11 @@ public class TcCollectionUtils {
      * 将字符串类型的List转化为以separator分割的字符串。
      *
      * @param list      字符串类型的List，若为空，返回null
-     * @param separator 分割符 若为空，则抛出异常{@link TTErrorCode#PARAMETER_NOT_BE_BLANK}
+     * @param separator 分割符 若为空，则抛出异常{@link TcErrorCode#PARAMETER_NOT_BE_BLANK}
      */
     public static String listToString(List<String> list, String separator) {
         if (StringUtils.isBlank(separator)) {
-            throw new TTException(TTErrorCode.PARAMETER_NOT_BE_BLANK, "separator");
+            throw new TcException(TcErrorCode.PARAMETER_NOT_BE_BLANK, "separator");
         }
 
         if (CollectionUtils.isEmpty(list)) {
@@ -59,13 +59,13 @@ public class TcCollectionUtils {
     /**
      * 将字符串以分割符转化为List<String>每个元素左右做去空操作
      *
-     * @param str       若为空则抛出异常{@link TTErrorCode#PARAMETER_NOT_BE_BLANK}
-     * @param separator 分割符{@link TTErrorCode#PARAMETER_NOT_BE_BLANK}
-     * @throws TTException
+     * @param str       若为空则抛出异常{@link TcErrorCode#PARAMETER_NOT_BE_BLANK}
+     * @param separator 分割符{@link TcErrorCode#PARAMETER_NOT_BE_BLANK}
+     * @throws TcException
      */
     public static List<String> stringToList(String str, String separator) {
         if (StringUtils.isBlank(str) || StringUtils.isBlank(separator)) {
-            throw new TTException(TTErrorCode.PARAMETER_NOT_BE_BLANK, "str,separator");
+            throw new TcException(TcErrorCode.PARAMETER_NOT_BE_BLANK, "str,separator");
         }
         String[] array = str.split(separator);
         List<String> list = new ArrayList<>(array.length);
