@@ -1,5 +1,7 @@
-package com.tc;
+package com.tc.tools;
 
+import com.tc.TcErrorCode;
+import com.tc.TcException;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;

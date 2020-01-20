@@ -8,7 +8,7 @@ public class TcException extends RuntimeException {
     }
 
     public TcException(TcErrorCode errorCode, String message, Throwable cause) {
-        super("=================>TTException error" + message, cause);
+        super("=================>TcException error" + message, cause);
         this.errorCode = errorCode;
     }
 
