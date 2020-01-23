@@ -6,9 +6,14 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * 字符操作类
+ */
 public class TcTextUtils {
     /**
      * 清除文本中script,style等标签，只保留文本
+     * @param inputString 输入的字符串
+     * @return 纯文本
      */
     public static String htmlToText(String inputString) {
         if (StringUtils.isBlank(inputString)) {
